@@ -4,9 +4,9 @@ name: CI Pipeline
 # 이 Workflow를 실행시키는 조건
 on:
   push:
-    branches: [ main, develop ]    # main 또는 develop에 push 시
+    branches: [ master, develop ]    # main 또는 develop에 push 시
   pull_request:
-    branches: [ main, develop ]    # PR 생성/업데이트 시
+    branches: [ master, develop ]    # PR 생성/업데이트 시
 
 jobs:
   # ── Job 1: 백엔드 빌드 & 테스트 ──
