@@ -41,7 +41,7 @@ async function handleLogin() {
     const password = document.getElementById('password').value;
 
     const loginData = {
-        user_Id: user_Id,
+        userId: userId,
         password: password
     };
 

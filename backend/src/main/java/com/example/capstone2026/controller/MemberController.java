@@ -36,7 +36,7 @@ public class MemberController {
     @PostMapping("/login")
     public ResponseEntity<?> login(@RequestBody Member loginRequest) {
         // 아이디로 DB 조회
-        Optional<Member> member = memberRepository.findByUserId(loginRequest.getUser_Id());
+        Optional<Member> member = memberRepository.findByUserId(loginRequest.getUserId());
 
         // 비밀번호 비교 (실습용 평문 비교)
         if (member.isPresent() && member.get().getPassword().equals(loginRequest.getPassword())) {
