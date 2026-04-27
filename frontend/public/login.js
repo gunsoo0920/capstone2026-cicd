@@ -10,7 +10,7 @@ async function handleRegister() {
     const name = document.getElementById('regName').value;
 
     const memberData = {
-        userId: userId,
+        user_Id: user_Id,
         password: password,
         name: name
     };
@@ -41,7 +41,7 @@ async function handleLogin() {
     const password = document.getElementById('password').value;
 
     const loginData = {
-        userId: userId,
+        user_Id: user_Id,
         password: password
     };
 
