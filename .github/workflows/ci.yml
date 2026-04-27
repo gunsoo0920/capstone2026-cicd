@@ -17,11 +17,13 @@ jobs:
       - name: Java 21 설정
         uses: actions/setup-java@v4
         with:
-          java-version: 21
-          distribution: temurin
+          java-version: '21'
+          distribution: 'temurin'
+          cache: 'maven' # 빌드 속도 향상을 위한 캐싱 추가
 
-      # 중요: ./mvnw 실행 권한을 먼저 부여해야 합니다.
-      - name: mvnw 실행 권한 부여
+      # Git에서 권한 설정을 마쳤다면 아래 'chmod' 단계는 삭제해도 됩니다.
+      # 만약 설정 전이라면 유지하세요.
+      - name: mvnw 실행 권한 확인 (필요시)
         run: chmod +x backend/mvnw
 
       - name: Maven 빌드 & 테스트
@@ -39,7 +41,8 @@ jobs:
       - name: Node.js 24 설정
         uses: actions/setup-node@v4
         with:
-          node-version: 24
+          node-version: '24'
+          cache: 'npm' # 의존성 설치 속도 향상
 
       - name: 의존성 설치 & 빌드
         run: |
