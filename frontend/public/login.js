@@ -10,7 +10,7 @@ async function handleRegister() {
     const name = document.getElementById('regName').value;
 
     const memberData = {
-        user_Id: user_Id,
+        userId: userId,
         password: password,
         name: name
     };
